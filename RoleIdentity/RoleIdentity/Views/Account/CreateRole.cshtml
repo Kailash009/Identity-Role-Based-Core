@@ -1,0 +1,12 @@
+﻿<h1>Create ROLES </h1>
+
+<h3 style="color:forestgreen;">@TempData["role"]</h3>
+
+<form asp-action="CreateRole" asp-controller="Account" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label>Role Name</label>
+        <input type="text" name="roleName" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Create Role</button>
+</form>

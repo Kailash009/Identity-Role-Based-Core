@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "AssignRole";
+}
+
+
+<h2>Assign Role</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AssignRole">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Enter Email:</label>
+                <input type="text" name="email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Role:</label>
+                <input type="text" name="role" class="form-control" />
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Assign Role" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
